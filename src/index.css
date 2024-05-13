@@ -1,0 +1,1075 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*search*/ 
+/* Common styles */
+/* Label inside input styling */
+.form-container input[type="text"],
+.form-container input[type="date"],
+.form-container input[type="number"],
+.form-container select {
+  
+  position: relative;
+}
+
+.form-container input[type="text"] + label,
+.form-container input[type="date"] + label,
+.form-container input[type="number"] + label,
+.form-container select + label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  background-color: #fff;
+  padding: 0 5px;
+  font-size: 12px;
+  color: #999;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.form-container input[type="text"]:focus + label,
+.form-container input[type="date"]:focus + label,
+.form-container input[type="number"]:focus + label,
+.form-container select:focus + label,
+.form-container input[type="text"]:not(:placeholder-shown) + label,
+.form-container input[type="date"]:not(:placeholder-shown) + label,
+.form-container input[type="number"]:not(:placeholder-shown) + label,
+.form-container select:not([value='']) + label {
+  
+  top: 0;
+  font-size: 10px;
+  color: #333;
+}
+
+/* Button styling */
+.form-container button {
+  padding: 20px 40px; /* Adjust as needed */
+  font-size: 16px; /* Adjust as needed */
+  border: none;
+  border-radius: 30px; /* Adjust as needed */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-container button:hover {
+  transform: scale(1.05); /* Increase size on hover */
+}
+
+/* Container for the form */
+.form-container {
+ 
+  display: grid;
+  grid-template-columns: 1fr; /* Single column layout */
+  gap: 20px; /* Adjust spacing between fields */
+}
+
+/* Style for each form field */
+.form-field {
+  display: flex;
+  align-items: center;
+}
+
+/* Style for the labels */
+.form-label {
+  flex: 0 0 40%; /* Adjust label width as needed */
+  text-align: right;
+  margin-right: 10px; /* Add some space between label and field */
+}
+
+/* Styling for the input fields */
+.form-input {
+  flex: 1; /* Take remaining space */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+}
+
+/* Style for the button */
+.form-button {
+  width: 100%; /* Full width button */
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #4caf50, #2196f3);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-button:hover {
+  transform: scale(1.05);
+}
+
+/* Styling for navbar */
+.h-10 {
+  
+  height: 4.5rem;
+}
+
+.from-primary {
+  
+  --tw-gradient-from: #0b0e12 var(--tw-gradient-from-position);
+  --tw-gradient-to: #0e1113 var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.comite-link {
+  color: blue; /* Change color to blue */
+}
+
+img#logo {
+  height: 75px; /* Adjust the height as needed */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.groupe-link,
+.comite-link {
+  text-decoration: none;
+  color: #ffffff; /* Change this to match your navbar color */
+  margin-right: 5px; /* Adjust spacing between links */
+}
+
+.groupe-link:hover,
+.comite-link:hover {
+  color: #f2f2f2; /* Change this to match your navbar color */
+}
+
+/* Dashboard */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #1e88e5;
+  color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.sidebar-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.sidebar-nav a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 0;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-nav a:hover {
+  background-color: #1565c0;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+textarea,
+input[type="file"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+button.btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Cars */
+.cars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.car {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.car img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.car-details {
+  padding: 20px;
+  background: #ECEDF1;
+}
+
+.car h2 {
+  margin: 0;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1rem;
+}
+
+.car p {
+  margin: 0;
+  margin-bottom: 5px;
+  color: #666;
+  font-size: 12px;
+}
+
+.car span.text-muted,
+.car small.text-muted,
+.car small.ghj,
+.car h6.ml-1 {
+  font-size: 9px;
+}
+
+.car small.key,
+.car small.justify-content-center {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.car button {
+  width: 100%;
+  padding: 10px;
+  background-color: #c89c22;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.car button:focus {
+  box-shadow: none;
+}
+
+.car button:hover {
+  background-color: #100d07;
+}
+
+/* For single card */
+.car-container {
+  width: 250px; /* Set a fixed width for the container */
+  margin: auto; /* Center the container */
+}
+/* Hotels */
+/* Hotel List Container */
+.location-dropdown {
+  margin-bottom: 20px; /* Add some spacing below the dropdown */
+}
+
+/* Optional styling for the select dropdown */
+.location-dropdown select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.hotel-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: -100px; /* Adjusted top margin */
+  overflow-y: scroll; /* Enable vertical scrolling if needed */
+}
+
+/* Hotel Card */
+.hotel-card {
+  width: calc(50% - 20px); /* Adjust the width as needed */
+  margin-bottom: 20px; /* Added spacing between cards */
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.hotel-card:hover {
+  transform: translateY(-5px);
+}
+
+.hotel-card img {
+  width: 100%; /* Adjust the width as needed */
+  height: 200px; /* Adjust the height as needed */
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Hotel Details */
+.hotel-details {
+  padding: 20px;
+}
+
+.hotel-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333333;
+  font-size: 1.5rem;
+}
+
+.hotel-card p {
+  margin-bottom: 10px;
+  color: #666666;
+  font-size: 1rem;
+}
+
+.star-rating {
+  color: goldenrod;
+  font-size: 1.2rem;
+}
+
+.price-box {
+  background-color: #f7f7f7;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Tariff Button */
+.tarif-btn {
+  background-color: goldenrod;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tarif-btn:hover {
+  background-color: #c0a16b;
+}
+
+.search-form {
+  width: 300px;
+  position: sticky;
+  top: 250px;
+  z-index: 1;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-form h3 {
+  margin-bottom: 10px;
+}
+
+.search-form input[type="text"],
+.search-form select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.search-form .star-filter {
+  margin-bottom: 10px;
+}
+
+.search-form .star-filter label {
+  margin-right: 10px;
+}
+
+/* Style for the stars in the select dropdown */
+.search-form select option .fa-star {
+  color: gold;
+}
+
+/* Style for the selected stars */
+.checked {
+  color: gold;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 80%;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #555555;
+}
+
+.close:hover {
+  color: #333333;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333333;
+}
+
+.modal-content p {
+  margin-bottom: 10px;
+  color: #666666;
+}
+
+.modal-content p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 10px;
+  }
+
+  .modal-content h2 {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* Modal */
+.modal {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #000;
+  font-size: 1.5rem;
+}
+
+/* Auth */.auth-container {
+  max-width: 400px;
+  margin: 150px auto 0 auto; /* Top padding set to 150px */
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff; /* White background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+.auth-container h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333; /* Dark gray text color */
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc; /* Light gray border color */
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.auth-container button {
+  background-color: #007bff; /* Blue button background color */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.auth-container button:hover {
+  background-color: #0056b3; /* Darker blue button background color on hover */
+}
+
+.auth-container .auth-toggle {
+  text-align: center;
+  margin-top: 10px; /* Add some space between buttons */
+}
+
+.auth-container .auth-toggle button {
+  background-color: #6c757d; /* Gray toggle button background color */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.auth-container .auth-toggle button:hover {
+  background-color: #5a6268; /* Darker gray toggle button background color on hover */
+}
+
+.google-signin {
+  text-align: center;
+  margin-top: 10px; /* Add some space between buttons */
+}
+
+.google-signin button {
+  background-color: #dc3545; /* Red Google sign-in button background color */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.google-signin button:hover {
+  background-color: #c82333; /* Darker red Google sign-in button background color on hover */
+}
+
+/* Hotel.css */
+
+.hotel-chat-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+.chat-bubble {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1001; /* Ensure it's above the chat window */
+}
+
+.chat-window {
+  position: fixed;
+  bottom: 150px; /* Adjust as needed */
+  right: 20px;
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: bottom 0.3s ease-in-out;
+  z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+.chat-window.open {
+  bottom: 20px;
+}
+
+.chat-header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  cursor: pointer;
+}
+
+.chat-content {
+  padding: 10px;
+  overflow-y: auto;
+  max-height: 200px; /* Adjust as needed */
+}
+
+.chat-message {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 70%;
+}
+
+.bot-message {
+  align-self: flex-start;
+}
+
+.user-message {
+  align-self: flex-end;
+}
+
+.chat-input {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.chat-input input {
+  width: calc(100% - 60px);
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.chat-input button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background-color: #0056b3;
+}
+
+/*hero/search*//* Styles for hero form content */
+.hero-form-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Styles for hero form container inner */
+.hero-form-container-inner {
+  max-width: 1600px; /* Adjust max-width as needed */
+  width: 100%;
+}
+
+/* Styles for form fields container */
+.hero-form-fields {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Styles for individual form field */
+.hero-form-fields > div {
+  display: flex;
+  align-items: center;
+  margin: 8px; /* Adjust margin as needed */
+}
+
+/* Styles for input fields */
+.hero-form-input {
+  min-width: 20px;
+  padding: 8px;
+  margin-right: 4px; /* Adjust margin-right as needed */
+  border: 1px solid #666;
+  border-radius: 5px;
+  height: 30px;
+  flex-grow: 1; /* Allow input fields to grow */
+}
+
+/* Styles for submit button */
+.hero-form-submit {
+  padding: 8px;
+  min-height: 30px;
+  background: #cb9b32;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+/*dash*/
+/*dash*/
+.dashboard-container {
+  display: flex;
+  position: relative;
+}
+.sidebar {
+  position: absolute;
+  top: 200px;
+  left: 20px;
+  width: 240px;
+  padding: 20px;
+  background-color: rgba(0, 123, 255, 0.8); /* Blueish color for frosted glass effect */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+}
+
+.sidebar-header {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.sidebar-nav button {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0056b3;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-nav button:hover {
+  background-color: #004080;
+}
+
+.main-content {
+  margin-top: 100px;
+  margin-left: 280px; /* Adjusted margin-left for the main content */
+}
+
+.form {
+  margin-top: 50px;
+  margin-left: 350px; /* Adjusted margin-left for toggled forms */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9); /* Frosted glass effect */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+input[type='text'],
+input[type='number'],
+input[type='email'],
+select,
+textarea {
+  width: calc(100% - 40px); /* Adjusted width to fit within viewport */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  height: 120px;
+}
+
+.btn {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.user-table th,
+.user-table td {
+  padding: 12px;
+  border: 1px solid #ccc;
+}
+
+.user-table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  text-align: left;
+}
+
+.user-table td {
+  text-align: left;
+}
+
+.user-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.user-table tbody tr:hover {
+  background-color: #e9e9e9;
+}
+
+.user-table button {
+  padding: 6px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 5px; /* Added spacing between buttons */
+}
+
+.user-table button:hover {
+  background-color: #0056b3;
+}
+
+.user-table td:nth-child(2) {
+  position: relative;
+}
+
+.user-table td:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #000;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.user-table td:nth-child(2) input[type="text"] {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.user-table td:nth-child(2) input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+.contact {
+  text-align: center;
+}
+
+.book-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.inputBox {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.inputBox span {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.inputBox input,
+.inputBox textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.inputBox textarea {
+  min-height: 100px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/*footer*/
+/*booking*/
+/* Booking form */
+.booking .book-form {
+  padding: 1rem; /* Reduce padding */
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  .booking .book-form {
+    max-width: 90%; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 1.5rem; /* Adjust padding */
+    box-shadow: none; /* Remove box shadow */
+  }
+}
+
+/* Media query for desktop view */
+@media (min-width: 769px) {
+  .booking .book-form {
+    max-width: 550px; /* Adjust the maximum width as needed */
+    margin-left: 650px; /* Adjust margin left for desktop */
+    margin-bottom: 50px;
+  }
+}
+
+/* Heading title */
+.heading-title {
+  margin-top: 50px; /* Adjust margin-top as needed */
+  font-weight: bold;
+  text-align: left;
+  font-size: 20px; /* Adjust font size as needed */
+}
+
+.booking .book-form .flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.booking .book-form .inputBox {
+  flex: 1 1 100%;
+}
+
+.booking .book-form input {
+  width: 100%;
+  padding: 8px; /* Reduce padding */
+  font-size: 14px; /* Reduce font size */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.booking .book-form input:focus {
+  border-color: #007bff;
+}
+
+.booking .book-form span {
+  display: block;
+  font-size: 14px; /* Reduce font size */
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.booking .book-form .btn {
+  width: 100%;
+  padding: 8px; /* Reduce padding */
+  background-color: #d2a602;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.booking .book-form .btn:hover {
+  background-color: #483903;
+}

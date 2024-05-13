@@ -1,0 +1,78 @@
+/* Cars */
+.cars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 50px;
+  }
+  
+  .car {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .car img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  
+  .car-details {
+    padding: 20px;
+    background: #ECEDF1;
+  }
+  
+  .car h2 {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1rem;
+  }
+  
+  .car p {
+    margin: 0;
+    margin-bottom: 5px;
+    color: #666;
+    font-size: 12px;
+  }
+  
+  .car span.text-muted,
+  .car small.text-muted,
+  .car small.ghj,
+  .car h6.ml-1 {
+    font-size: 9px;
+  }
+  
+  .car small.key,
+  .car small.justify-content-center {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .car button {
+    width: 100%;
+    padding: 10px;
+    background-color: #c89c22;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .car button:focus {
+    box-shadow: none;
+  }
+  
+  .car button:hover {
+    background-color: #100d07;
+  }
+  
+  /* For single card */
+  .car-container {
+    width: 250px; /* Set a fixed width for the container */
+    margin: auto; /* Center the container */
+  }
